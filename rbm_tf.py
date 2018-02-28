@@ -12,7 +12,7 @@ This file implement class RBM for tensorflow library.
 import math
 import tensorflow as tf
 import numpy as np
-import Image
+from PIL import Image
 from util import tile_raster_images
 
 

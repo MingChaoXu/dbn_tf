@@ -91,9 +91,9 @@ class NN(object):
                 for i in range(len(self._sizes) + 1):
                     self.w_list[i] = sess.run(_w[i])
                     self.b_list[i] = sess.run(_b[i])
-                print np.mean(np.argmax(self._Y, axis=1) ==
+                print(np.mean(np.argmax(self._Y, axis=1) ==
                               sess.run(predict_op, feed_dict={
-                                  _a[0]: self._X, y: self._Y}))
+                                  _a[0]: self._X, y: self._Y})))
 
     def predict(self, X):
         """TODO: Docstring for predict.

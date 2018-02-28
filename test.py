@@ -23,9 +23,9 @@ trX, trY, teX, teY = mnist.train.images, mnist.train.labels, mnist.test.images,\
 
 opts = DLOption(10, 1., 100, 0.0, 0., 0.)
 dbn = DBN([400, 100], opts, trX)
-dbn.train()
+# dbn.train()
 nn = NN([100], opts, trX, trY)
 nn = NN([400, 100], opts, trX, trY)
-nn.load_from_dbn(dbn)
+# nn.load_from_dbn(dbn)
 nn.train()
-print np.mean(np.argmax(teY, axis=1) == nn.predict(teX))
+print(np.mean(np.argmax(teY, axis=1) == nn.predict(teX)))
